@@ -23,7 +23,7 @@ const index = () => {
   return (
     <>
     <Head>
-      <title>PageSearch::Dev_Run -> William</title>
+      <title>PageSearch::Dev_Run_William</title>
     </Head>
     <div className='container'>
       <div>
