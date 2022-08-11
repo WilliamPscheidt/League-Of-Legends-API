@@ -33,7 +33,7 @@ const search = (props) => {
     return (
         <div className='app_container'>
             <Head>
-                <title>PageInfos::Dev_Run -> William</title>
+                <title>PageInfos::Dev_Run - William</title>
             </Head>
 
             {
