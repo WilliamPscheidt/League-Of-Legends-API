@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 import Lottie from 'react-lottie-player'
 import lottieJson from '../public/52871-teemo-motion.json'
 
@@ -20,6 +21,10 @@ const index = () => {
   }
 
   return (
+    <>
+    <Head>
+      <title>PageSearch::Dev_Run -> William</title>
+    </Head>
     <div className='container'>
       <div>
         <Lottie
@@ -54,6 +59,7 @@ const index = () => {
         </div>
       }
     </div>
+    </>
   )
 }
 

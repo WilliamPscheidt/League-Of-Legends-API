@@ -2,6 +2,7 @@ import React from 'react'
 import SearchPlayer from '../../../functions/SearchPlayer'
 import Configurations from '../../../configs/configs.json'
 import Image from 'next/image'
+import Head from 'next/head'
 
 export async function getServerSideProps(contexto) {
     const playerObject = new SearchPlayer("https://" + contexto.query.region + ".api.riotgames.com/", Configurations.API_KEY)
@@ -22,17 +23,25 @@ export async function getServerSideProps(contexto) {
 }
 
 const search = (props) => {
-    const base_url = "/cdn/profileicon/" + props.playerInformations.profileIconId + ".png"
-    console.log(props.playerInformations)
+
+    if(props.playerQueueInformations[1]){
+        if(props.playerQueueInformations[1].queueType === "RANKED_SOLO_5x5"){
+            props.playerQueueInformations.splice(1, 0)
+        }
+    }
 
     return (
-        <>
+        <div className='app_container'>
+            <Head>
+                <title>PageInfos::Dev_Run -> William</title>
+            </Head>
+
             {
                 props.playerInformations.name
                     ?
                     <>
                         <h1>Icon</h1>
-                        <Image src={base_url} alt="Profile Icon" width={200} height={200} />
+                        <Image src={"/cdn/profileicon/" + props.playerInformations.profileIconId + ".png"} alt="Profile Icon" width={200} height={200} />
                         <h1>PlayerInformations</h1>
 
                         <div>
@@ -81,7 +90,7 @@ const search = (props) => {
                                     return [
                                         <div key={i}>
                                             {
-                                                i.info
+                                                i.info.gameCreation
                                                     ?
                                                     <ul>
                                                         <h1>{i.info.gameCreation}</h1>
@@ -118,7 +127,7 @@ const search = (props) => {
                     :
                     "Jogador Não encontrado"
             }
-        </>
+        </div>
     )
 }
 
