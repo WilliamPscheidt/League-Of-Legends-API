@@ -12,7 +12,8 @@ export async function getStaticPaths() {
                 region: "BR1"
             }
         }],
-        fallback: 'blocking'
+        fallback: 'blocking',
+        revalidate: 3600
     }
 }
 
