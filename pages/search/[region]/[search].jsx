@@ -17,6 +17,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(contexto) {
+    console.log(contexto.params.region)
+    console.log(contexto.params.search)
     const playerObject = new SearchPlayer("https://" + contexto.params.region + ".api.riotgames.com/", Configurations.API_KEY)
 
     const playerInformations = await (playerObject.getInitialInformations(contexto.params.search))
@@ -35,6 +37,8 @@ export async function getStaticProps(contexto) {
 }
 
 const search = (props) => {
+
+    console.log(props.playerMatchInformations)
 
     if (props.playerInformations && props.playerQueueInformations) {
         return (
