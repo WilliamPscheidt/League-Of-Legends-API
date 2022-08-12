@@ -31,6 +31,7 @@ export async function getStaticProps(context) {
             playerMatchHistoryIds: playerMatchHistoryIds,
             playerMatchInfos: playerMatchInformations,
         },
+        revalidate: 3600,
     }
 }
 
