@@ -1,5 +1,5 @@
 {
-  "API_KEY": "RGAPI-3c1513a5-600e-41e3-a42b-ad4025e06a67",
+  "API_KEY": "RGAPI-98744663-b1e8-4c35-9530-bce06d59d621",
   "API_SUMMONER_TO_ID": "lol/summoner/v4/summoners/by-name/",
   "API_ID_TO_INFORMATIONS": "lol/league/v4/entries/by-summoner/",
   "API_SUMMONER_MATCH_INFORMATIONS": "/lol/match/v5/matches/",
