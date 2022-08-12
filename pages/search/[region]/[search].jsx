@@ -17,12 +17,10 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps(contexto) {
-    console.log(contexto.params.region)
-    console.log(contexto.params.search)
-    const playerObject = new SearchPlayer("https://" + contexto.params.region + ".api.riotgames.com/", Configurations.API_KEY)
+export async function getStaticProps(context) {
+    const playerObject = new SearchPlayer("https://" + context.params.region + ".api.riotgames.com/", Configurations.API_KEY)
 
-    const playerInformations = await (playerObject.getInitialInformations(contexto.params.search))
+    const playerInformations = await (playerObject.getInitialInformations(context.params.search))
     const playerQueueInformations = await (playerObject.getQueueInformations(playerInformations.id))
     const playerMatchHistoryIds = await (playerObject.getMatchHistoryIds(playerInformations.puuid))
     const playerMatchInformations = await (playerObject.getMatchInfos(playerMatchHistoryIds))
