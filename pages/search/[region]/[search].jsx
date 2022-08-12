@@ -12,8 +12,7 @@ export async function getStaticPaths() {
                 region: "BR1"
             }
         }],
-        fallback: true,
-        revalidate: 3600,
+        revalidate: 3600
     }
 }
 
