@@ -13,7 +13,7 @@ export async function getStaticPaths() {
             }
         }],
         fallback: 'blocking',
-        revalidate: 3600
+        revalidate: 3600,
     }
 }
 
