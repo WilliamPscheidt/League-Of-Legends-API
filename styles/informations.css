@@ -93,3 +93,7 @@
 .app_container .app_ .right_app {
     width: 100%;
 }
+
+.app_container .app_ .right_app .match_history {
+    display: flex;
+}
