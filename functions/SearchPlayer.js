@@ -36,7 +36,7 @@ export default class Player {
     async getMatchInfos(matchId) {
         let matchInfo = [];
 
-        for (let a = 0; a < 10; a++) {
+        for (let a = 0; a < Configurations.API_REQUEST; a++) {
             await fetch("https://americas.api.riotgames.com/lol/match/v5/matches/" + matchId[a] + "?api_key=" + this.apiKey)
                 .then(response => response.json())
                 .then(data => matchInfo.push(data))
