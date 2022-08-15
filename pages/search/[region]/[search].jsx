@@ -36,11 +36,9 @@ export async function getStaticProps(context) {
 }
 
 const search = (props) => {
-    console.log(props.playerInformations)
-    console.log(props.playerQueueInformations)
-    console.log(props.playerMatchHistoryIds)
-    console.log(props.playerInformations)
-    console.log(props.playerMatchInfos)
+    function DataFilter(data) {
+        return data.puuid === props.playerInformations.puuid
+    }
 
     if (props.playerInformations && props.playerQueueInformations) {
         return (
@@ -98,6 +96,8 @@ const search = (props) => {
                                 <div className='right_app'>
                                     {
                                         props.playerMatchInfos.map((i) => {
+                                            console.log("Partida: ------------")
+                                            console.log(i.info.participants.filter(DataFilter))
                                             return [
                                                 <div key={i} className='match_history'>
                                                     {
@@ -143,7 +143,9 @@ const search = (props) => {
                 <Head>
                     <title>PageInfos::Error - William</title>
                 </Head>
-                <h1>Dados não e</h1>
+                <div>
+                    <h1>Dados não encontrados</h1>
+                </div>
             </div>
         )
     }
