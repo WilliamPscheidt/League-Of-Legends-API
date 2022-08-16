@@ -36,8 +36,25 @@ export async function getStaticProps(context) {
 }
 
 const search = (props) => {
+    
     function DataFilter(data) {
         return data.puuid === props.playerInformations.puuid
+    }
+
+    function FilterWinrate() {
+        let wins = 0;
+        let losses = 0;
+        
+        props.playerMatchInfos.forEach(element => {
+            let player = element.info.participants.filter(DataFilter)
+            if(player[0].win == true) {
+                wins++
+            } else {
+                losses++
+            }
+        })
+
+        return ((wins / (wins + losses)) * 100).toFixed(2)
     }
 
     function TeamBlueFilter(data) {
@@ -152,10 +169,23 @@ const search = (props) => {
                                 </div>
 
                                 <div className='right_app'>
+                                    <div className='container_statistics'>
+                                        <h3 className='statistics_title'>LAST 10 MATCHS</h3>
+                                        <div className='statistics'>
+                                            <div className='statistic'>
+                                                <span className='text'>{FilterWinrate()}% Winrate</span>
+                                            </div>
+                                            <div className='statistic'>
+                                                <span className='text'>KDA</span>
+                                            </div>
+                                            <div className='statistic'>
+                                                <span className='text'>FARM</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                     {
                                         props.playerMatchInfos.map((i) => {
                                             const PlayerInfo = i.info.participants.filter(DataFilter)
-                                            console.log(PlayerInfo)
                                             const TeamBlue = i.info.participants.filter(TeamBlueFilter)
                                             const TeamRed = i.info.participants.filter(TeamRedFilter)
                                             return [

@@ -126,6 +126,41 @@
     width: 100%;
 }
 
+.app_container .app_ .right_app .container_statistics {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: #131111;
+    padding: 10px 40px;
+    box-shadow: 0px 4px 99px 6px rgba(0, 0, 0, 0.25);
+}
+
+.app_container .app_ .right_app .container_statistics .statistics_title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.135em;
+    color: #BEB9B9;
+}
+
+.app_container .app_ .right_app .container_statistics .statistics {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.app_container .app_ .right_app .container_statistics .statistics .text {
+    color: #BEB9B9;
+}
+
+.app_container .app_ .right_app .container_statistics .statistic {
+    background: rgba(167, 167, 167, 0.02);
+    border-radius: 30px;
+    padding: 10px 60px;
+}
+
 .app_container .app_ .right_app .match_history {
     margin-top: 30px;
     padding: 18px 40px;
