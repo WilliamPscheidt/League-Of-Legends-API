@@ -9,8 +9,8 @@
 
 .app_container .app_ {
     display: flex;
-    width: 70%;
-    min-width: 1200px;
+    width: 60%;
+    min-width: 1050px;
 }
 
 .app_container .app_ .left_app {
@@ -19,23 +19,29 @@
 }
 
 .app_container .app_ .left_app .icon_div {
-    padding-bottom: 20px;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 0 20px;
+    padding-bottom: 20px;
     background-color: #131111;
     box-shadow: 0px 4px 99px 6px rgba(0, 0, 0, 0.25);
     border-radius: 0 0 15px 15px;
 }
 
-.app_container .app_ .left_app .icon_div .profile_icon {
-    width: 180px;
-    height: 170px;
+.app_container .app_ .left_app .icon_div .profile_icon_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app_container .app_ .left_app .icon_div .profile_icon_div .profile_icon {
+    width: 120px;
+    height: 120px;
     border-radius: 0 0 15px 15px;
 }
 
-.app_container .app_ .left_app .icon_div .profile_level {
+.app_container .app_ .left_app .icon_div .profile_icon_div .profile_level {
     margin-top: -12px;
     padding: 2px 10px;
     background-color: #1778D3;
@@ -44,6 +50,31 @@
     text-align: center;
     border-radius: 15px;
     z-index: 2;
+}
+
+.app_container .app_ .left_app .icon_div .icon_div_internal {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.app_container .app_ .left_app .icon_div .icon_div_internal .player_name {
+    color: #BEB9B9;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.245em;
+}
+
+.app_container .app_ .left_app .icon_div .icon_div_internal .update_button {
+    padding: 5px 20px;
+    border-radius: 30px;
+    background-color: #1778d3bb;
+    color: white;
+    cursor: pointer;
 }
 
 .app_container .app_ .left_app .card {
@@ -259,4 +290,21 @@
 .app_container .app_ .right_app .match_history .container_champions  .champion_image {
     width: 35px;
     margin: 0 5px;
+}
+
+@media (max-width: 1049px) { 
+    .app_container .app_ {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .app_container .app_ .left_app .card{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
 }

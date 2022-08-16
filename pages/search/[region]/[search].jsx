@@ -106,8 +106,14 @@ const search = (props) => {
                             <div className='app_'>
                                 <div className='left_app'>
                                     <div className='icon_div'>
-                                        <img src={"/cdn/profileicon/" + props.playerInformations.profileIconId + ".png"} alt="Profile Icon" width={100} height={200} className="profile_icon" />
-                                        <span className='profile_level'>{props.playerInformations.summonerLevel}</span>
+                                        <div className='profile_icon_div'>
+                                            <img src={"/cdn/profileicon/" + props.playerInformations.profileIconId + ".png"} alt="Profile Icon" width={100} height={200} className="profile_icon" />
+                                            <span className='profile_level'>{props.playerInformations.summonerLevel}</span>
+                                        </div>
+                                        <div className='icon_div_internal'>
+                                            <h1 className='player_name'>{props.playerInformations.name}</h1>
+                                            <button className='update_button'>Update</button>
+                                        </div>
                                     </div>
                                     <div className='card'>
                                         {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "IRON" && <img src="/cdn/ranked-emblems/Emblem_Iron.png" alt='Iron Icon' width={120} height={120} className="profile_elo" />}

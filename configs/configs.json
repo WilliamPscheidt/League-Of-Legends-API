@@ -4,5 +4,5 @@
   "API_ID_TO_INFORMATIONS": "lol/league/v4/entries/by-summoner/",
   "API_SUMMONER_MATCH_INFORMATIONS": "/lol/match/v5/matches/",
   "API_PUUID_TO_MATCH_HISTORY": "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/",
-  "API_REQUEST": 5
+  "API_REQUEST": 8
 } 
