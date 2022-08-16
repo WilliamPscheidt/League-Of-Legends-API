@@ -1,8 +1,8 @@
 {
-  "API_KEY": "RGAPI-84adf414-8304-4607-b51b-f40af47a8258",
+  "API_KEY": "RGAPI-39d93524-e0a0-4529-b447-fd899307704e",
   "API_SUMMONER_TO_ID": "lol/summoner/v4/summoners/by-name/",
   "API_ID_TO_INFORMATIONS": "lol/league/v4/entries/by-summoner/",
   "API_SUMMONER_MATCH_INFORMATIONS": "/lol/match/v5/matches/",
   "API_PUUID_TO_MATCH_HISTORY": "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/",
-  "API_REQUEST": 8
+  "API_REQUEST": 5
 } 

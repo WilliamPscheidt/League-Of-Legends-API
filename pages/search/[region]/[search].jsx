@@ -116,15 +116,15 @@ const search = (props) => {
                                         </div>
                                     </div>
                                     <div className='card'>
-                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "IRON" && <img src="/cdn/ranked-emblems/Emblem_Iron.png" alt='Iron Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "SILVER" && <img src="/cdn/ranked-emblems/Emblem_Silver.png" alt='Silver Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "BRONZE" && <img src="/cdn/ranked-emblems/Emblem_Bronze.png" alt='Bronze Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "GOLD" && <img src="/cdn/ranked-emblems/Emblem_Gold.png" alt='Gold Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "PLATINUM" && <img src="/cdn/ranked-emblems/Emblem_Platinum.png" alt='Platinum Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "DIAMOND" && <img src="/cdn/ranked-emblems/Emblem_Diamond.png" alt='Diamond Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "MASTER" && <img src="/cdn/ranked-emblems/Emblem_Master.png" alt='Master Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "GRANDMASTER" && <img src="/cdn/ranked-emblems/Emblem_Grandmaster.png" alt='Grandmaster Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "CHALLENGER" && <img src="/cdn/ranked-emblems/Emblem_Challenger.png" alt='Iron Icon' width={120} height={120} className="profile_elo" />}
+                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "IRON" && <img src="/cdn/ranked-emblems/Emblem_Iron.png" alt='Iron Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "SILVER" && <img src="/cdn/ranked-emblems/Emblem_Silver.png" alt='Silver Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "BRONZE" && <img src="/cdn/ranked-emblems/Emblem_Bronze.png" alt='Bronze Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "GOLD" && <img src="/cdn/ranked-emblems/Emblem_Gold.png" alt='Gold Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "PLATINUM" && <img src="/cdn/ranked-emblems/Emblem_Platinum.png" alt='Platinum Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "DIAMOND" && <img src="/cdn/ranked-emblems/Emblem_Diamond.png" alt='Diamond Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "MASTER" && <img src="/cdn/ranked-emblems/Emblem_Master.png" alt='Master Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "GRANDMASTER" && <img src="/cdn/ranked-emblems/Emblem_Grandmaster.png" alt='Grandmaster Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[1] && props.playerQueueInformations[1].tier == "CHALLENGER" && <img src="/cdn/ranked-emblems/Emblem_Challenger.png" alt='Iron Icon' width={100} height={100} className="profile_elo" />}
 
                                         <div className='card_infos'>
                                             <span className='card_text'>{props.playerQueueInformations[1].queueType}</span>
@@ -133,15 +133,15 @@ const search = (props) => {
                                         </div>
                                     </div>
                                     <div className='card'>
-                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "IRON" && <img src="/cdn/ranked-emblems/Emblem_Iron.png" alt='Iron Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "SILVER" && <img src="/cdn/ranked-emblems/Emblem_Silver.png" alt='Silver Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "BRONZE" && <img src="/cdn/ranked-emblems/Emblem_Bronze.png" alt='Bronze Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "GOLD" && <img src="/cdn/ranked-emblems/Emblem_Gold.png" alt='Gold Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "PLATINUM" && <img src="/cdn/ranked-emblems/Emblem_Platinum.png" alt='Platinum Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "DIAMOND" && <img src="/cdn/ranked-emblems/Emblem_Diamond.png" alt='Diamond Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "MASTER" && <img src="/cdn/ranked-emblems/Emblem_Master.png" alt='Master Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "GRANDMASTER" && <img src="/cdn/ranked-emblems/Emblem_Grandmaster.png" alt='Grandmaster Icon' width={120} height={120} className="profile_elo" />}
-                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "CHALLENGER" && <img src="/cdn/ranked-emblems/Emblem_Challenger.png" alt='Iron Icon' width={120} height={120} className="profile_elo" />}
+                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "IRON" && <img src="/cdn/ranked-emblems/Emblem_Iron.png" alt='Iron Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "SILVER" && <img src="/cdn/ranked-emblems/Emblem_Silver.png" alt='Silver Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "BRONZE" && <img src="/cdn/ranked-emblems/Emblem_Bronze.png" alt='Bronze Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "GOLD" && <img src="/cdn/ranked-emblems/Emblem_Gold.png" alt='Gold Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "PLATINUM" && <img src="/cdn/ranked-emblems/Emblem_Platinum.png" alt='Platinum Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "DIAMOND" && <img src="/cdn/ranked-emblems/Emblem_Diamond.png" alt='Diamond Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "MASTER" && <img src="/cdn/ranked-emblems/Emblem_Master.png" alt='Master Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "GRANDMASTER" && <img src="/cdn/ranked-emblems/Emblem_Grandmaster.png" alt='Grandmaster Icon' width={100} height={100} className="profile_elo" />}
+                                        {props.playerQueueInformations[0] && props.playerQueueInformations[0].tier == "CHALLENGER" && <img src="/cdn/ranked-emblems/Emblem_Challenger.png" alt='Iron Icon' width={100} height={100} className="profile_elo" />}
 
                                         <div className='card_infos'>
                                             <span className='card_text'>{props.playerQueueInformations[0].queueType}</span>

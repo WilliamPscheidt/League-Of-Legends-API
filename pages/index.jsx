@@ -25,6 +25,9 @@ const index = () => {
     <Head>
       <title>PageSearch::Dev_Run_William</title>
     </Head>
+    <div className='test-information'>
+      <span className='text'>Test Version</span>
+    </div>
     <div className='container'>
       <div>
         <Lottie

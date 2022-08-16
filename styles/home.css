@@ -5,10 +5,6 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: hsla(0, 0%, 0%, 0.796);
-    background-blend-mode: color;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .container .loading_text {

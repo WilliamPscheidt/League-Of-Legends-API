@@ -13,5 +13,25 @@
 }
 
 body {
-  background-color: #131111;
+  background-color: #131111;;
+}
+
+
+.test-information {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 25px;
+  background-color: #1b1717;
+  border-radius: 20px;
+}
+
+.test-information .text {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.2em;
 }
