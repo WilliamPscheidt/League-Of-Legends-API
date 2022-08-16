@@ -64,14 +64,15 @@
     color: #BEB9B9;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 23px;
     letter-spacing: 0.245em;
 }
 
 .app_container .app_ .left_app .icon_div .icon_div_internal .update_button {
-    padding: 5px 20px;
+    padding: 4px 20px;
     border-radius: 30px;
+    margin-top: 10px;
     background-color: #1778d3bb;
     color: white;
     cursor: pointer;
@@ -202,7 +203,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 11px;
     line-height: 24px;
     letter-spacing: 0.51em;
     color: rgba(116, 255, 104, 0.81);
@@ -213,7 +214,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 15px;
+    font-size: 11px;
     line-height: 24px;
     letter-spacing: 0.51em;
     color: rgba(255, 104, 104, 0.81);
@@ -234,16 +235,23 @@
 
 .app_container .app_ .right_app .match_history .container_kda {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .app_container .app_ .right_app .match_history .container_kda .container_kda_internal {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-right: 10px;
     border-right: 2px solid #beb9b90f;
     padding-right: 10px;
+}
+
+.app_container .app_ .right_app .match_history .container_kda .container_kda_internal:nth-child(1) {
+    margin-right: 10px;
 }
 
 .app_container .app_ .right_app .match_history .container_kda .container_kda_internal:nth-child(2) {
@@ -253,7 +261,7 @@
 .app_container .app_ .right_app .match_history .container_kda .container_kda_internal .title {
     font-size: 13px;
     font-weight: 400;
-    color: #beb9b9d4;
+    color: #d9d9d9d4;
 }
 
 .app_container .app_ .right_app .match_history .container_kda .container_kda_internal .kda_text {
@@ -270,7 +278,7 @@
 }
 
 .app_container .app_ .right_app .match_history .container_items .item_icon {
-    width: 35px;
+    width: 30px;
     margin: 0 5px;
 }
 
@@ -288,7 +296,7 @@
 }
 
 .app_container .app_ .right_app .match_history .container_champions  .champion_image {
-    width: 35px;
+    width: 30px;
     margin: 0 5px;
 }
 
