@@ -36,14 +36,15 @@ export async function getStaticProps(context) {
 }
 
 const search = (props) => {
+
+    console.log(props.playerMatchInfos)
     
     function DataFilter(data) {
         return data.puuid === props.playerInformations.puuid
     }
 
     function FilterWinrate() {
-        let wins = 0;
-        let losses = 0;
+        let wins = 0; let losses = 0;
         
         props.playerMatchInfos.forEach(element => {
             let player = element.info.participants.filter(DataFilter)
@@ -55,6 +56,57 @@ const search = (props) => {
         })
 
         return ((wins / (wins + losses)) * 100).toFixed(2)
+    }
+
+    function FilterKDA() {
+        let kills = 0; let deaths = 0; let assists = 0; let matchLength = 0;
+
+        props.playerMatchInfos.forEach(element => {
+            let player = element.info.participants.filter(DataFilter)
+            kills += player[0].kills
+            deaths += player[0].deaths
+            assists += player[0].assists
+            matchLength++
+        })
+
+        return kills/matchLength+"/"+deaths/matchLength+"/"+assists/matchLength
+    }
+
+    function FilterDamage() {
+        let damage = 0; let match = 0;
+
+        props.playerMatchInfos.forEach(element => {
+            let player = element.info.participants.filter(DataFilter)
+            damage += player[0].totalDamageDealtToChampions
+            match++
+        })
+
+        return damage / match
+    }
+
+    function FilterGoldEarned() {
+        let gold = 0; let matchs = 0;
+
+        props.playerMatchInfos.forEach(element => {
+            let player = element.info.participants.filter(DataFilter)
+            gold += player[0].goldEarned
+            matchs++
+        })
+
+        return gold / matchs
+    }
+
+    function FilterFarm() {
+        let neutralKilled = 0; let totalMinionsKilled = 0; let matchs = 0;
+
+        props.playerMatchInfos.forEach(element => {
+            let player = element.info.participants.filter(DataFilter)
+            neutralKilled += player[0].neutralMinionsKilled
+            totalMinionsKilled += player[0].totalMinionsKilled
+            matchs++
+        })
+
+        return (neutralKilled + totalMinionsKilled)/matchs
     }
 
     function TeamBlueFilter(data) {
@@ -170,17 +222,30 @@ const search = (props) => {
 
                                 <div className='right_app'>
                                     <div className='container_statistics'>
-                                        <h3 className='statistics_title'>LAST 10 MATCHS</h3>
+                                        <div className='container_header'>
+                                            <div className='title_area'><h3 className='statistics_title'>LAST 10 MATCHS</h3></div>
+                                            <div className='line'></div>
+                                        </div>
                                         <div className='statistics'>
                                             <div className='statistic'>
-                                                <span className='text'>{FilterWinrate()}% Winrate</span>
+                                                <span className='text'><b id="emphasis">{FilterWinrate()}%</b> Winrate</span>
                                             </div>
                                             <div className='statistic'>
-                                                <span className='text'>KDA</span>
+                                                <span className='text'><b id="emphasis">{FilterKDA()}</b> KDA</span>
                                             </div>
                                             <div className='statistic'>
-                                                <span className='text'>FARM</span>
+                                                <span className='text'><b id="emphasis">{FilterFarm()}</b> FARM</span>
                                             </div>
+                                            <div className='statistic'>
+                                                <span className='text'><b id="emphasis">{FilterGoldEarned()}k</b> Gold Earned</span>
+                                            </div>
+                                            <div className='statistic'>
+                                                <span className='text'><b id="emphasis">{FilterDamage()}k</b> Damage</span>
+                                            </div>
+
+
+
+                                            
                                         </div>
                                     </div>
                                     {
