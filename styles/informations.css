@@ -64,8 +64,7 @@
     color: #BEB9B9;
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
-    line-height: 23px;
+    font-size: 0.9rem;
     letter-spacing: 0.245em;
 }
 
@@ -79,18 +78,22 @@
 }
 
 .app_container .app_ .left_app .card {
+    padding: 10px;
     margin-top: 30px;
     padding-bottom: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #131111;
     box-shadow: 0px 4px 99px 6px rgba(0, 0, 0, 0.25);
     border-radius: 0 0 15px 15px;
 }
 
+
 .app_container .app_ .left_app .card .card_infos {
+    position: relative;
+    left: -20px;
     margin-top: 15px;
     border-left-width: 3px;
     border-right-width: 0px;
@@ -132,33 +135,55 @@
     width: 100%;
     height: auto;
     background-color: #131111;
-    padding: 10px 40px;
+    padding: 20px 20px;
     box-shadow: 0px 4px 99px 6px rgba(0, 0, 0, 0.25);
 }
 
-.app_container .app_ .right_app .container_statistics .statistics_title {
+.app_container .app_ .container_statistics .container_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+}
+
+.app_container .app_ .container_statistics .container_header .line {
+    width: 71%;
+    height: 2px;
+    background-color: #151515;
+}
+
+.app_container .app_ .right_app .container_statistics .container_header .statistics_title {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    letter-spacing: 0.135em;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.5em;
     color: #BEB9B9;
 }
 
 .app_container .app_ .right_app .container_statistics .statistics {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     justify-content: space-between;
 }
 
 .app_container .app_ .right_app .container_statistics .statistics .text {
     color: #BEB9B9;
+    align-items: left;
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+.app_container .app_ .right_app .container_statistics .statistics #emphasis {
+    color: #d9d9d9;
+    font-weight: 500;
+    font-size: 0.8rem;
 }
 
 .app_container .app_ .right_app .container_statistics .statistic {
-    background: rgba(167, 167, 167, 0.02);
+    background: linear-gradient(90deg, rgba(220, 220, 220, 0.033) 0%, rgba(140, 253, 138, 0) 100%);
     border-radius: 30px;
-    padding: 10px 60px;
+    padding: 0.5rem 0.8rem 0.5rem 0.8rem;
 }
 
 .app_container .app_ .right_app .match_history {
@@ -344,10 +369,21 @@
         width: 100%;
     }
 
+    .app_container .app_ .left_app {
+        width: 100vw;
+    }
+    .app_container .app_ .right_app {
+        width: 100vw;
+    }
+
     .app_container .app_ .left_app .card{
         display: flex;
         width: 100%;
         align-items: center;
         justify-content: center;
+    }
+
+    .app_container .app_ .left_app .icon_div .profile_icon_div {
+        width: 50%;
     }
 }
